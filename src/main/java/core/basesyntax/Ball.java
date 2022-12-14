@@ -1,35 +1,30 @@
 package core.basesyntax;
 
 public class Ball {
-    String ballColor;
-    int ballNumber;
+  private String color;
+  private int number;
 
-    public Ball() {
-    }
+  public String getColor() {
+    return color;
+  }
 
-    public Ball(String color, int number) {
-        this.ballColor = color;
-        this.ballNumber = number;
-    }
+  public void setColor(String color) {
+    this.color = color;
+  }
 
-    public String getBallColor() {
-        return this.ballColor;
-    }
+  public int getNumber() {
+    return number;
+  }
 
-    public void setBallColor(String ballColor) {
-        this.ballColor = ballColor;
-    }
+  public void setNumber(int number) {
+    this.number = number;
+  }
 
-    public int getBallNumber() {
-        return this.ballNumber;
-    }
-
-    public void setBallNumber(int ballNumber) {
-        this.ballNumber = ballNumber;
-    }
-
-    public String toString() {
-        String ball = "ball";
-        return "Ball with number: " + ballNumber + " and color: " + ballColor;
-    }
+  @Override
+  public String toString() {
+    return "Ball{" +
+        "color='" + color + '\'' +
+        ", number=" + number +
+        '}';
+  }
 }

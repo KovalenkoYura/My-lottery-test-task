@@ -1,12 +1,13 @@
 package core.basesyntax;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class ColorSupplier {
-
-
-    public static String getRandomColor() {
-        int index = new Random().nextInt(Colors.values().length);
-        return Colors.values()[index].toString();
-    }
+  public String getRandomColor() {
+    Random random = new Random();
+    List<Colors> colors = Arrays.asList(Colors.values());
+    return colors.get(random.nextInt(colors.size())).name();
+  }
 }
